@@ -20,4 +20,12 @@ public class UserServiceImpl implements UserService {
         List<User> allUser = userMapper.getAllUser(queryObject);
         return allUser;
     }
+
+    @Override
+    public boolean insertUsers(List<User> users) {
+        for (User user : users) {
+            userMapper.insertUser(user);
+        }
+        return true;
+    }
 }

@@ -9,4 +9,6 @@ import java.util.List;
 public interface UserService {
 
     List<User> getAllUsers(UserQueryObject queryObject);
+
+    boolean insertUsers(List<User> users);
 }

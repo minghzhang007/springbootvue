@@ -9,11 +9,11 @@
         <result column="hobby" property="hobby" jdbcType="VARCHAR"/>
     </resultMap>
 
-    <select id="getAllUser" resultMap="user">
+    <select id="getAllUser" resultMap="user" parameterType="com.lewis.sprinbootvue.biz.mybatis.queryObject.UserQueryObject">
         SELECT * from user
         <where>
             <if test="name != null and name !=''">
-                name like '%${name}'
+                name like concat('%',#{name},'%')
             </if>
             <if test="hobby != null and hobby !=''">
                 and hobby = ${hobby}
@@ -21,4 +21,7 @@
         </where>
     </select>
 
+    <insert id="insertUser" parameterType="com.lewis.sprinbootvue.biz.mybatis.entity.User">
+        INSERT INTO user(name,hobby,birthday) VALUE (#{name},#{hobby},#{birthday})
+    </insert>
 </mapper>
