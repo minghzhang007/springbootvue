@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sharding_0?useUnicode=yes&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+
+  session:
+    store-type: none
+
+  redis:
+    host: 192.168.200.128
+    port: 6379
+    password: lewis
+
+  thymeleaf:
+    encoding: utf-8
+    cache: false
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+
+
+server:
+  port: 8060
+
+security:
+  basic:
+    enabled: false
+
+mybatis:
+  typeAliasesPackage: com.lewis.springbootvue.biz.mybatis.entity
+  mapperLocations: classpath:mapper/*
+
+logging:
+  level:
+    org.springframework: warn
+    com.lewis.sprinbootvue.biz.mybatis.dao.UserMapper: debug
+  file: logs/spring-boot-log.log

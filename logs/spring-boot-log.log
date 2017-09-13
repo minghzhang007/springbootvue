@@ -1,0 +1,279 @@
+2017-09-13 19:56:03.033  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 12848 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 19:56:03.033  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 19:56:03.035  INFO 12848 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6160aef1: startup date [Wed Sep 13 19:56:03 CST 2017]; root of context hierarchy
+2017-09-13 19:56:03.411  INFO 12848 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8060 (http)
+2017-09-13 19:56:03.411  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 19:56:03.411  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 19:56:03.423  INFO 12848 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 19:56:03.424  INFO 12848 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 389 ms
+2017-09-13 19:56:03.453  INFO 12848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-13 19:56:03.453  INFO 12848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-13 19:56:03.454  INFO 12848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-13 19:56:03.454  INFO 12848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-13 19:56:03.454  INFO 12848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-13 19:56:03.627  INFO 12848 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6160aef1: startup date [Wed Sep 13 19:56:03 CST 2017]; root of context hierarchy
+2017-09-13 19:56:03.634  INFO 12848 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.lang.String com.lewis.sprinbootvue.biz.controller.HelloController.user()
+2017-09-13 19:56:03.634  INFO 12848 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[POST]}" onto public java.util.List<com.lewis.sprinbootvue.biz.mybatis.entity.User> com.lewis.sprinbootvue.biz.controller.HelloController.users(com.lewis.sprinbootvue.biz.mybatis.queryObject.UserQueryObject)
+2017-09-13 19:56:03.635  INFO 12848 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-13 19:56:03.635  INFO 12848 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-13 19:56:03.641  INFO 12848 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-13 19:56:03.641  INFO 12848 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-13 19:56:03.651  INFO 12848 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-13 19:56:03.661  WARN 12848 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 19:56:03.691  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-09-13 19:56:03.799  INFO 12848 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-13 19:56:03.800  INFO 12848 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-09-13 19:56:03.802  INFO 12848 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-09-13 19:56:03.809  INFO 12848 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8060 (http)
+2017-09-13 19:56:03.811  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.878 seconds (JVM running for 586.825)
+2017-09-13 19:56:58.355  INFO 12848 --- [Thread-46] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6160aef1: startup date [Wed Sep 13 19:56:03 CST 2017]; root of context hierarchy
+2017-09-13 19:56:58.357  INFO 12848 --- [Thread-46] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-09-13 19:56:58.357  INFO 12848 --- [Thread-46] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2017-09-13 19:56:58.556  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 12848 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 19:56:58.556  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 19:56:58.894  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 19:56:58.894  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 19:56:58.905  INFO 12848 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 19:56:59.139  WARN 12848 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 19:56:59.287  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.764 seconds (JVM running for 642.302)
+2017-09-13 19:57:23.114  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 12848 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 19:57:23.115  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 19:57:23.455  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 19:57:23.455  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 19:57:23.467  INFO 12848 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 19:57:23.708  WARN 12848 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 19:57:23.861  INFO 12848 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.783 seconds (JVM running for 666.875)
+2017-09-13 19:57:34.512  INFO 6560 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 6560 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 19:57:34.512  INFO 6560 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 19:57:35.784  INFO 6560 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 19:57:35.785  INFO 6560 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 19:57:35.846  INFO 6560 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 19:57:36.785  WARN 6560 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 19:57:37.409  INFO 6560 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 3.312 seconds (JVM running for 4.081)
+2017-09-13 19:57:50.625  INFO 6560 --- [http-nio-8060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-13 19:57:57.704  INFO 6560 --- [http-nio-8060-exec-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-09-13 19:59:17.188  INFO 6560 --- [Thread-12] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2017-09-13 19:59:17.581  INFO 6560 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 6560 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 19:59:17.581  INFO 6560 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 19:59:18.050  INFO 6560 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 19:59:18.050  INFO 6560 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 19:59:18.065  INFO 6560 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 19:59:23.087  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 19:59:23.088  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 19:59:24.496  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 19:59:24.497  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 19:59:24.560  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 19:59:25.468  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 19:59:26.094  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 3.596 seconds (JVM running for 4.358)
+2017-09-13 19:59:46.367  INFO 13172 --- [http-nio-8060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-13 19:59:50.349  INFO 13172 --- [http-nio-8060-exec-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-09-13 19:59:50.478 DEBUG 13172 --- [http-nio-8060-exec-7] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%'||? and hobby = ? 
+2017-09-13 19:59:50.492 DEBUG 13172 --- [http-nio-8060-exec-7] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: (String), (String)
+2017-09-13 19:59:50.517 DEBUG 13172 --- [http-nio-8060-exec-7] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 6
+2017-09-13 20:00:42.244 DEBUG 13172 --- [http-nio-8060-exec-8] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%'||? and hobby = ? 
+2017-09-13 20:00:42.245 DEBUG 13172 --- [http-nio-8060-exec-8] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 张三(String), (String)
+2017-09-13 20:00:42.247 DEBUG 13172 --- [http-nio-8060-exec-8] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 6
+2017-09-13 20:01:17.327  INFO 13172 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2017-09-13 20:01:17.880  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:01:17.881  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:01:18.360  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:01:18.360  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:01:18.375  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:01:18.702  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:01:18.902  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 1.155 seconds (JVM running for 117.167)
+2017-09-13 20:01:24.411  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:01:24.412  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:01:24.766  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:01:24.767  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:01:24.780  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:01:25.038  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:01:25.193  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.818 seconds (JVM running for 123.459)
+2017-09-13 20:01:29.343  INFO 13172 --- [http-nio-8060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-13 20:01:32.159  INFO 13172 --- [http-nio-8060-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2017-09-13 20:01:32.165 DEBUG 13172 --- [http-nio-8060-exec-1] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%'||? and hobby = ? 
+2017-09-13 20:01:32.165 DEBUG 13172 --- [http-nio-8060-exec-1] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 张三(String), (String)
+2017-09-13 20:01:32.168 DEBUG 13172 --- [http-nio-8060-exec-1] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 6
+2017-09-13 20:02:09.144  INFO 13172 --- [Thread-28] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2017-09-13 20:02:09.493  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:02:09.494  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:02:09.845  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:02:09.845  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:02:09.889  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:02:10.196  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:02:10.353  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.897 seconds (JVM running for 168.618)
+2017-09-13 20:02:14.900  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:02:14.900  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:02:15.265  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:02:15.265  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:02:15.278  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:02:15.549  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:02:15.702  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.841 seconds (JVM running for 173.967)
+2017-09-13 20:02:20.528  INFO 13172 --- [http-nio-8060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-13 20:02:24.265  INFO 13172 --- [http-nio-8060-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2017-09-13 20:02:24.272 DEBUG 13172 --- [http-nio-8060-exec-6] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user 
+2017-09-13 20:02:24.272 DEBUG 13172 --- [http-nio-8060-exec-6] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 
+2017-09-13 20:02:24.275 DEBUG 13172 --- [http-nio-8060-exec-6] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 6
+2017-09-13 20:02:37.644 DEBUG 13172 --- [http-nio-8060-exec-10] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%'||?||'%' 
+2017-09-13 20:02:37.644 DEBUG 13172 --- [http-nio-8060-exec-10] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 张三(String)
+2017-09-13 20:02:37.646 DEBUG 13172 --- [http-nio-8060-exec-10] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 6
+2017-09-13 20:05:12.207  INFO 13172 --- [Thread-40] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2017-09-13 20:05:12.503  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:05:12.503  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:05:12.856  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:05:12.856  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:05:12.870  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:05:13.119  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:05:13.372  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.906 seconds (JVM running for 351.636)
+2017-09-13 20:05:14.819  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:05:14.819  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:05:15.191  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:05:15.192  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:05:15.204  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:05:15.454  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:05:15.626  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.842 seconds (JVM running for 353.891)
+2017-09-13 20:05:18.561  INFO 13172 --- [http-nio-8060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-13 20:05:22.399  INFO 13172 --- [http-nio-8060-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2017-09-13 20:05:22.405 DEBUG 13172 --- [http-nio-8060-exec-1] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%?%' 
+2017-09-13 20:05:22.422 ERROR 13172 --- [http-nio-8060-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.String, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).] with root cause
+
+java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3321) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3306) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4021) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.setString(DruidPooledPreparedStatement.java:366) ~[druid-1.1.3.jar:1.1.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67) ~[mybatis-3.4.5.jar:3.4.5]
+	at com.sun.proxy.$Proxy79.setString(Unknown Source) ~[na:na]
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:31) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:26) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:53) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:93) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) ~[mybatis-3.4.5.jar:3.4.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at com.sun.proxy.$Proxy64.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) ~[mybatis-3.4.5.jar:3.4.5]
+	at com.sun.proxy.$Proxy86.getAllUser(Unknown Source) ~[na:na]
+	at com.lewis.sprinbootvue.biz.service.impl.UserServiceImpl.getAllUsers(UserServiceImpl.java:20) ~[classes/:na]
+	at com.lewis.sprinbootvue.biz.controller.HelloController.users(HelloController.java:28) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2017-09-13 20:06:15.468  INFO 13172 --- [Thread-52] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closed
+2017-09-13 20:06:15.742  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:06:15.744  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:06:16.231  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:06:16.231  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:06:16.243  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:06:16.485  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:06:16.641  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.951 seconds (JVM running for 414.906)
+2017-09-13 20:06:21.518  INFO 13172 --- [http-nio-8060-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-13 20:06:24.784  INFO 13172 --- [http-nio-8060-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} inited
+2017-09-13 20:06:24.790 DEBUG 13172 --- [http-nio-8060-exec-3] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%张三%' 
+2017-09-13 20:06:24.791 DEBUG 13172 --- [http-nio-8060-exec-3] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 
+2017-09-13 20:06:24.793 DEBUG 13172 --- [http-nio-8060-exec-3] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 1
+2017-09-13 20:06:46.548 DEBUG 13172 --- [http-nio-8060-exec-2] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE hobby = ? 
+2017-09-13 20:06:46.549 DEBUG 13172 --- [http-nio-8060-exec-2] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 跳舞(String)
+2017-09-13 20:06:46.550 DEBUG 13172 --- [http-nio-8060-exec-2] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 1
+2017-09-13 20:08:00.890 DEBUG 13172 --- [http-nio-8060-exec-4] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%张三;delete from user%' 
+2017-09-13 20:08:00.890 DEBUG 13172 --- [http-nio-8060-exec-4] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 
+2017-09-13 20:08:00.891 DEBUG 13172 --- [http-nio-8060-exec-4] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 0
+2017-09-13 20:08:53.916  INFO 13172 --- [Thread-58] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closed
+2017-09-13 20:08:54.188  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:08:54.188  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:08:54.527  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:08:54.527  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:08:54.539  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:08:54.800  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:08:54.955  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.801 seconds (JVM running for 573.22)
+2017-09-13 20:08:58.864  INFO 13172 --- [http-nio-8060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-13 20:09:02.225  INFO 13172 --- [http-nio-8060-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} inited
+2017-09-13 20:09:02.231 DEBUG 13172 --- [http-nio-8060-exec-6] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user 
+2017-09-13 20:09:02.231 DEBUG 13172 --- [http-nio-8060-exec-6] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 
+2017-09-13 20:09:02.233 DEBUG 13172 --- [http-nio-8060-exec-6] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 6
+2017-09-13 20:09:18.597 DEBUG 13172 --- [http-nio-8060-exec-10] c.l.s.b.m.dao.UserMapper.getAllUser      : ==>  Preparing: SELECT * from user WHERE name like '%张三;delete from user%' 
+2017-09-13 20:09:18.598 DEBUG 13172 --- [http-nio-8060-exec-10] c.l.s.b.m.dao.UserMapper.getAllUser      : ==> Parameters: 
+2017-09-13 20:09:18.598 DEBUG 13172 --- [http-nio-8060-exec-10] c.l.s.b.m.dao.UserMapper.getAllUser      : <==      Total: 0
+2017-09-13 20:09:34.470  INFO 13172 --- [Thread-64] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closed
+2017-09-13 20:09:34.678  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Starting Application on DESKTOP-1C8D6S8 with PID 13172 (E:\code\github_workspace\springbootvue\target\classes started by lewis in E:\code\github_workspace\springbootvue)
+2017-09-13 20:09:34.678  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : No active profile set, falling back to default profiles: default
+2017-09-13 20:09:35.196  INFO 13172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-13 20:09:35.196  INFO 13172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-13 20:09:35.208  INFO 13172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-13 20:09:35.453  WARN 13172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-09-13 20:09:35.608  INFO 13172 --- [restartedMain] com.lewis.sprinbootvue.Application       : Started Application in 0.968 seconds (JVM running for 613.873)
+2017-09-13 20:09:40.447  INFO 13172 --- [http-nio-8060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lewis.sprinbootvue.biz.mybatis.dao.UserMapper">
+
+    <resultMap id="user" type="com.lewis.sprinbootvue.biz.mybatis.entity.User">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="birthday" property="birthday" jdbcType="BIGINT"/>
+        <result column="hobby" property="hobby" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="getAllUser" resultMap="user">
+        SELECT * from user
+        <where>
+            <if test="name != null and name !=''">
+                name like '%${name}'
+            </if>
+            <if test="hobby != null and hobby !=''">
+                and hobby = ${hobby}
+            </if>
+        </where>
+    </select>
+
+</mapper>

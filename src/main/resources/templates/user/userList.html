@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Vue Demo</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+
+    <div id="app">
+        <div>
+            <form class="form-horizontal" role="form" id="searchForm">
+
+                 <div class="row">
+                     <div class="form-group">
+                         <label for="name" class="col-md-2 control-label">姓名</label>
+                         <div class="col-md-4">
+                             <input type="text" class="form-control" name="name" id="name"/>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="hobby" class="col-md-2 control-label">爱好</label>
+                         <div class="col-md-4">
+                             <input type="text" class="form-control" name="hobby" id="hobby"/>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="form-group">
+                         <button type="button" class="btn btn-default col-md-offset-2" @click="query">搜索
+                         </button>
+                     </div>
+                 </div>
+            </form>
+        </div>
+        <div>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>姓名</td>
+                    <td>爱好</td>
+                    <td>出生日期</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(person,index) in people">
+                    <td>{{person.id}}</td>
+                    <td>{{person.name}}</td>
+                    <td>{{person.hobby}}</td>
+                    <td>{{person.birthday}}</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-default" @click="deletePerson(index)">删除用户</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<script src="../../js/jquery-3.2.1.js"></script>
+<script src="../../js/vue.js"></script>
+<script src="../../js/user/userList.js"></script>
+
+</body>
+</html>

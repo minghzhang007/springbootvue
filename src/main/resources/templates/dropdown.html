@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>bootstrap中下拉菜单的使用</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">主题
+            <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Java</a>
+            </li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+            </li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+            </li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+            </li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="dropdown-header">下拉菜单标题</li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">按钮1</button>
+        <button type="button" class="btn btn-default">按钮2</button>
+        <button type="button" class="btn btn-default">按钮3</button>
+    </div>
+
+
+    <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">按钮1</button>
+            <button type="button" class="btn btn-default">按钮2</button>
+            <button type="button" class="btn btn-default">按钮3</button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">按钮4</button>
+            <button type="button" class="btn btn-default">按钮5</button>
+            <button type="button" class="btn btn-default">按钮6</button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">按钮7</button>
+            <button type="button" class="btn btn-default">按钮8</button>
+            <button type="button" class="btn btn-default">按钮9</button>
+        </div>
+    </div>
+
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">默认</button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">切换下拉菜单</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">功能1</a> </li>
+            <li><a href="#">功能2</a> </li>
+            <li><a href="#">功能3</a> </li>
+            <li class="divider"></li>
+            <li><a href="#">分离的链接</a> </li>
+        </ul>
+    </div>
+
+
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-primary">原始</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">切换下拉菜单</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">功能1</a> </li>
+            <li><a href="#">功能2</a> </li>
+            <li><a href="#">功能3</a> </li>
+            <li class="divider"></li>
+            <li><a href="#">分离的链接</a> </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>
