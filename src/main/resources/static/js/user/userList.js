@@ -70,7 +70,17 @@ VM = new Vue({
             });
         },
         exportToExcel:function () {
-
+            window.location.href="http://localhost:8060/export";
+           /* $.ajax({
+                url: "http://localhost:8060/export",
+                type: "GET",
+                dataType: "json",
+                data: _this.queryForm,
+                success: function (data) {
+                    console.log("返回数据：" + data);
+                    _this.result.data=data;
+                }
+            });*/
         }
     }
 });

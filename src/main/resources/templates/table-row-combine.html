@@ -259,6 +259,7 @@
         </tbody>
     </table>
     <button type="button" class="button" >合并</button>
+    <button type="button" class="export" >导出</button>
 </div>
 <script src="../../js/jquery-3.2.1.js"></script>
 <script src="../../js/bootstrap.js"></script>
@@ -273,6 +274,9 @@
             $("#table").bootstrapTable('mergeCells',{index: 0, field: 'platform', colspan: 1, rowspan: 5,style:'text-align:center;vertical-align:middle'});
             $("#table").bootstrapTable('mergeCells',{index: 5, field: 'platform', colspan: 1, rowspan: 5,style:'text-align:center;vertical-align:middle'});
             $("#table").bootstrapTable('mergeCells',{index: 10, field: 'platform', colspan: 1, rowspan: 2,style:'text-align:center;vertical-align:middle'});
+        });
+        $(".export").click(function(){
+            window.location.href="http://localhost:8060/export";
         });
     })
 
