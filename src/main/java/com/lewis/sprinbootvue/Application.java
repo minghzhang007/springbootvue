@@ -41,10 +41,8 @@ public class Application {
         sqlSessionFactoryBean.setDataSource(dataSource());
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mapper/*.xml"));
-
         //添加分页插件
         sqlSessionFactoryBean.setPlugins(new Interceptor[]{pageHelper()});
-
         return sqlSessionFactoryBean.getObject();
     }
 

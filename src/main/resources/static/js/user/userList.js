@@ -68,6 +68,9 @@ VM = new Vue({
                     _this.result.data=data;
                 }
             });
+        },
+        exportToExcel:function () {
+
         }
     }
 });

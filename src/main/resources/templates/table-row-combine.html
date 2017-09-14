@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Table表格行列合并</title>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/bootstrap-table.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">bootstrap中Table表格行列合并</h1>
+    <table id="table" class="table table-striped table-bordered table-hover table-responsive"
+           data-toggle="table"
+           data-toolbar="#toolbar"
+           data-height="600">
+        <!--caption含义？-->
+        <caption align="top">基本的表格布局</caption>
+        <thead>
+        <tr>
+            <th data-field="year">年份</th>
+            <th data-field="platform">平台</th>
+            <th data-field="timeType">时长类型</th>
+            <th>1月</th>
+            <th>2月</th>
+            <th>3月</th>
+            <th>4月</th>
+            <th>5月</th>
+            <th>6月</th>
+            <th>7月</th>
+            <th>8月</th>
+            <th>9月</th>
+            <th>10月</th>
+            <th>11月</th>
+            <th>12月</th>
+            <th>年度累计收入</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="vertical-align: middle;">2017</td>
+            <td>IOS</td>
+            <td>6元/7天</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>1200</td>
+        <tr>
+            <td>2017年</td>
+            <td>IOS</td>
+            <td>12元/14天</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>IOS</td>
+            <td>25元/30天</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>IOS</td>
+            <td>298元/365天</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>IOS</td>
+            <td>IAP分成</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>Android</td>
+            <td>1元/1天</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>1200</td>
+        </tr>
+        <tr class="active">
+            <td>2017年</td>
+            <td>Android</td>
+            <td>6元/7天</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>1200</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>Android</td>
+            <td>12元/14天</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>Android</td>
+            <td>25元/30天</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>Android</td>
+            <td>298元/365天</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>双平台</td>
+            <td>单月累计收入</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        <tr>
+            <td>2017年</td>
+            <td>双平台</td>
+            <td>单月结算收入</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>2400</td>
+        </tr>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" class="button" >合并</button>
+</div>
+<script src="../../js/jquery-3.2.1.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="../../js/bootstrap-table.js"></script>
+<script src="../../js/vue.js"></script>
+<script>
+
+    $(function () {
+        $(".button").click(function () {
+            console.log("button click !")
+            $("#table").bootstrapTable('mergeCells',{index: 0, field: 'year', colspan: 1, rowspan: 12,style:'text-align:center;vertical-align:middle'});
+            $("#table").bootstrapTable('mergeCells',{index: 0, field: 'platform', colspan: 1, rowspan: 5,style:'text-align:center;vertical-align:middle'});
+            $("#table").bootstrapTable('mergeCells',{index: 5, field: 'platform', colspan: 1, rowspan: 5,style:'text-align:center;vertical-align:middle'});
+            $("#table").bootstrapTable('mergeCells',{index: 10, field: 'platform', colspan: 1, rowspan: 2,style:'text-align:center;vertical-align:middle'});
+        });
+    })
+
+
+</script>
+</body>
+</html>

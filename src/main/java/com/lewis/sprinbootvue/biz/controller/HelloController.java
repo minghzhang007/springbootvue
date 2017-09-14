@@ -1,5 +1,6 @@
 package com.lewis.sprinbootvue.biz.controller;
 
+import com.lewis.sprinbootvue.biz.domain.test.StaticRecord;
 import com.lewis.sprinbootvue.biz.mybatis.entity.User;
 import com.lewis.sprinbootvue.biz.mybatis.queryObject.UserQueryObject;
 import com.lewis.sprinbootvue.biz.service.UserService;
@@ -50,5 +51,17 @@ public class HelloController {
         userService.insertUsers(users);
         String ok ="{\"ok\":\"success\"}";
         return ok;
+    }
+
+    @GetMapping("/staticRecords")
+    @ResponseBody
+    public List<StaticRecord> getStaticRecords(){
+
+        return StaticRecord.getStaticRecords();
+    }
+
+    @GetMapping("/toRecord")
+    public String toRecord(){
+        return "table-row-combine";
     }
 }
