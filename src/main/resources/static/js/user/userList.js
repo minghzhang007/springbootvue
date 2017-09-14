@@ -12,18 +12,21 @@ VM = new Vue({
     }
     ,
     methods: {
-        createPerson: function () {
-            this.people.push(this.newPerson);
-            this.newPerson = {
-                name: '',
-                age: 0,
-                sex: 'Male'
-            }
+        createUser: function () {
+            var _this = this;
+            var url="http://localhost:8060/addUsers";
+            $.ajax({
+                url:url,
+                type:"GET",
+                dataType:"JSON",
+                success:function (data) {
+                    console.log("返回数据："+data);
+                    //_this.people=data;
+                    _this.query();
+                }
+            });
         },
-        deletePerson: function (index) {
-            // 删一个数组元素
-            this.people.splice(index, 1)
-        },
+
         query:function () {
             var _this = this;
             var data = $("#searchForm").serializeArray()

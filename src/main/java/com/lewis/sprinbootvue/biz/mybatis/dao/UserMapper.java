@@ -9,4 +9,6 @@ import java.util.List;
 public interface UserMapper {
 
     List<User>  getAllUser(UserQueryObject userQueryObject);
+
+    boolean insertUser(User user);
 }
