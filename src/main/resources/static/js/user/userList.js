@@ -3,9 +3,21 @@ var VM;
 VM = new Vue({
     el: "#app",
     data: {
-        people: [ ],
+        people: [],
+        pageSize: 10,
+        // 搜索表单
+        queryForm : {},
+        // 结果对象
+        result: {
+            data: [],
+            paginator: {
+                currentPage: 0,
+                totalCount: 0,
+                totalPage: 0
+            }
+        },
     },
-    mounted:function () {
+    mounted: function () {
         this.$nextTick(function () {
             this.query();
         })
@@ -14,30 +26,46 @@ VM = new Vue({
     methods: {
         createUser: function () {
             var _this = this;
-            var url="http://localhost:8060/addUsers";
+            var url = "http://localhost:8060/addUsers";
             $.ajax({
-                url:url,
-                type:"GET",
-                dataType:"JSON",
-                success:function (data) {
-                    console.log("返回数据："+data);
-                    //_this.people=data;
+                url: url,
+                type: "GET",
+                dataType: "JSON",
+                success: function (data) {
+                    console.log("返回数据：" + data);
                     _this.query();
                 }
             });
         },
 
-        query:function () {
+        query: function () {
             var _this = this;
-            var data = $("#searchForm").serializeArray()
+            var pageInfo = {
+                "currentPage": _this.result.paginator.currentPage,
+                "pageSize": _this.pageSize,
+                "totalCount": _this.result.paginator.totalCount
+            };
             $.ajax({
-                url:"http://localhost:8060/user",
-                type:"POST",
-                dataType:"JSON",
-                data:data,
-                success:function (data) {
-                    console.log("返回数据："+data);
-                    _this.people=data;
+                url: "http://localhost:8060/userPage",
+                type: "POST",
+                dataType: "JSON",
+                data: $.extend(_this.queryForm,pageInfo),
+                success: function (data) {
+                    console.log("返回数据：" + data);
+                    _this.result = data;
+                }
+            });
+        },
+        queryAll: function () {
+            var _this = this;
+            $.ajax({
+                url: "http://localhost:8060/allUser",
+                type: "POST",
+                dataType: "JSON",
+                data: _this.queryForm,
+                success: function (data) {
+                    console.log("返回数据：" + data);
+                    _this.result.data=data;
                 }
             });
         }

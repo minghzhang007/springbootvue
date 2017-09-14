@@ -16,9 +16,13 @@
                 name like concat('%',#{name},'%')
             </if>
             <if test="hobby != null and hobby !=''">
-                and hobby = ${hobby}
+                and hobby = #{hobby}
             </if>
         </where>
+    </select>
+    
+    <select id="countTotal" resultType="int">
+        SELECT count(*) from user
     </select>
 
     <insert id="insertUser" parameterType="com.lewis.sprinbootvue.biz.mybatis.entity.User">

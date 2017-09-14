@@ -11,4 +11,6 @@ public interface UserMapper {
     List<User>  getAllUser(UserQueryObject userQueryObject);
 
     boolean insertUser(User user);
+
+    Integer countTotal();
 }

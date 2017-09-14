@@ -9,70 +9,165 @@
     <title>Vue Demo</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/style.css"/>
 </head>
 <body>
-<div class="container">
+<div >
+    <div id="wrapper">
+        <!--<div class="overlay"></div>-->
 
-    <div id="app">
-        <div>
-            <form class="form-horizontal" role="form" id="searchForm">
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        蜗牛读书
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-folder"></i> Page one</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-file-o"></i> Second page</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Dropdown heading</li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-bank"></i> Page four</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-dropbox"></i> Page 5</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-twitter"></i> Last page</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
 
-                 <div class="row">
-                     <div class="form-group">
-                         <label for="name" class="col-md-2 control-label">姓名</label>
-                         <div class="col-md-4">
-                             <input type="text" class="form-control" name="name" id="name"/>
-                         </div>
-                     </div>
-                     <div class="form-group">
-                         <label for="hobby" class="col-md-2 control-label">爱好</label>
-                         <div class="col-md-4">
-                             <input type="text" class="form-control" name="hobby" id="hobby"/>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="form-group">
-                         <button type="button" class="btn btn-default col-md-offset-2" @click="query">搜索
-                         </button>
-                     </div>
-                     <div class="form-group">
-                         <button type="button" class="btn btn-default" @click="createUser">新增用户
-                         </button>
-                     </div>
-                 </div>
-            </form>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+            <div class="container">
+                <div id="app">
+                    <div>
+                        <form class="form-horizontal form-" role="form" id="searchForm">
+
+                            <div class="row">
+                                <div class="form-group">
+                                    <label for="name" class="col-md-1 control-label">姓名</label>
+                                    <div class="col-md-2">
+                                        <input type="text" class="form-control" name="name" id="name" v-model="queryForm.name"/>
+                                    </div>
+
+                                    <label for="hobby" class="col-md-1 control-label">爱好</label>
+                                    <div class="col-md-2">
+                                        <input type="text" class="form-control" name="hobby" id="hobby" v-model="queryForm.hobby"/>
+                                    </div>
+
+                                    <button type="button" class="btn btn-default " @click="query">分页搜索</button>
+                                    <button type="button" class="btn btn-default " @click="queryAll">搜索全部</button>
+
+                                    <button type="button" class="btn btn-default" @click="createUser">新增用户</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>姓名</td>
+                                <td>爱好</td>
+                                <td>出生日期</td>
+                                <td>操作</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="(person,index) in result.data">
+                                <td>{{person.id}}</td>
+                                <td>{{person.name}}</td>
+                                <td>{{person.hobby}}</td>
+                                <td>{{person.birthday}}</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default" @click="deletePerson(index)">删除用户</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="100">
+                                        <vue-page :paginator="result.paginator" :size="10" :query="query"></vue-page>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div>
-            <table class="table table-bordered table-hover table-striped">
-                <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>姓名</td>
-                    <td>爱好</td>
-                    <td>出生日期</td>
-                    <td>操作</td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="(person,index) in people">
-                    <td>{{person.id}}</td>
-                    <td>{{person.name}}</td>
-                    <td>{{person.hobby}}</td>
-                    <td>{{person.birthday}}</td>
-                    <td class="text-center">
-                        <button type="button" class="btn btn-default" @click="deletePerson(index)">删除用户</button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        <!-- /#page-content-wrapper -->
 
     </div>
+
+
 </div>
 <script src="../../js/jquery-3.2.1.js"></script>
+<script src="../../js/bootstrap.js"></script>
 <script src="../../js/vue.js"></script>
+<script src="../../js/vue.page.js"></script>
 <script src="../../js/user/userList.js"></script>
+<script>
+    $(document).ready(function () {
+        var trigger = $('.hamburger'),
+            overlay = $('.overlay'),
+            isClosed = false;
+
+        trigger.click(function () {
+            hamburger_cross();
+        });
+
+        function hamburger_cross() {
+
+            if (isClosed == true) {
+                overlay.hide();
+                trigger.removeClass('is-open');
+                trigger.addClass('is-closed');
+                isClosed = false;
+            } else {
+               // overlay.show();
+                trigger.removeClass('is-closed');
+                trigger.addClass('is-open');
+                isClosed = true;
+            }
+        }
+
+        $('[data-toggle="offcanvas"]').click(function () {
+            $('#wrapper').toggleClass('toggled');
+        });
+    });
+</script>
 
 </body>
 </html>

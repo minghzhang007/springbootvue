@@ -3,6 +3,8 @@ package com.lewis.sprinbootvue.biz.controller;
 import com.lewis.sprinbootvue.biz.mybatis.entity.User;
 import com.lewis.sprinbootvue.biz.mybatis.queryObject.UserQueryObject;
 import com.lewis.sprinbootvue.biz.service.UserService;
+import com.lewis.sprinbootvue.biz.utils.page.PageList;
+import com.lewis.sprinbootvue.biz.utils.page.Paginator;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,15 +26,17 @@ public class HelloController {
         return "user/userList";
     }
 
-    @PostMapping("/user")
+    @PostMapping("/userPage")
     @ResponseBody
-    public List<User> users(UserQueryObject userQuery) {
-        List<User> allUsers = userService.getAllUsers(userQuery);
-        /*for (int i = 1; i <= 15; i++) {
-            User user = new User(i,"lewis0077_"+i,"sing_"+i,new Date());
-            allUsers.add(user);
-        }*/
+    public PageList<User> usersByPage(UserQueryObject userQuery, Paginator paginator) {
+        PageList<User> allUsers = userService.getUsersByPage(userQuery,paginator);
         return allUsers;
+    }
+
+    @PostMapping("/allUser")
+    @ResponseBody
+    public List<User> allUsers(UserQueryObject userQuery){
+        return userService.getAllUsers(userQuery);
     }
 
     @GetMapping("/addUsers")
