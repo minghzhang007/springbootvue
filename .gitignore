@@ -6,6 +6,6 @@ logs
 /.externalToolBuilders
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
-*.iml
+.iml
 out
 gen
