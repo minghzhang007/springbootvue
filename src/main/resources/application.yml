@@ -1,9 +1,20 @@
 spring:
+  #datasource:
+   # driver-class-name: com.mysql.jdbc.Driver
+   # url: jdbc:mysql://127.0.0.1:3306/sharding_0?useUnicode=yes&characterEncoding=utf-8&useSSL=false
+   # username: root
+   # password: root
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/sharding_0?useUnicode=yes&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: root
+    master:
+      url: jdbc:mysql://127.0.0.1:3306/sharding_0?useUnicode=yes&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+    cluster:
+      url: jdbc:mysql://127.0.0.1:3306/sharding_1?useUnicode=yes&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
 
   session:
     store-type: none
@@ -19,7 +30,6 @@ spring:
     mode: HTML
     prefix: classpath:/templates/
     suffix: .html
-
 
 server:
   port: 8060

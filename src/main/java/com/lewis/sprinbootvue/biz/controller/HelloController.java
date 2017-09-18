@@ -8,14 +8,13 @@ import com.lewis.sprinbootvue.biz.utils.excel.AbstractExportExcelTemplate;
 import com.lewis.sprinbootvue.biz.utils.page.PageList;
 import com.lewis.sprinbootvue.biz.utils.page.Paginator;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -54,6 +53,24 @@ public class HelloController {
         userService.insertUsers(users);
         String ok = "{\"ok\":\"success\"}";
         return ok;
+    }
+
+    @PostMapping("/toAddUser")
+    @ResponseBody
+    public User toAddUser(@RequestBody User user) {
+        System.out.println(user);
+        return user;
+    }
+
+    @GetMapping("/addUser")
+    public String addUser(@RequestParam("name") String name,@RequestParam("hobby") String hobby){
+        User user = new User();
+        user.setName(name);
+        user.setHobby(hobby);
+        user.setBirthday(System.currentTimeMillis());
+        userService.insertUsers(Arrays.asList(user));
+        String ok = "{\"ok\":\"success\"}";
+        return "user/userList";
     }
 
     @GetMapping("/staticRecords")

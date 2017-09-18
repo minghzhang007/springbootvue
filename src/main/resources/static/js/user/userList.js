@@ -6,7 +6,8 @@ VM = new Vue({
         people: [],
         pageSize: 10,
         // 搜索表单
-        queryForm : {},
+        queryForm: {},
+        addForm: {},
         // 结果对象
         result: {
             data: [],
@@ -26,11 +27,13 @@ VM = new Vue({
     methods: {
         createUser: function () {
             var _this = this;
-            var url = "http://localhost:8060/addUsers";
+            var url = "http://localhost:8060/addUser";
+            var data = _this.addForm;
             $.ajax({
                 url: url,
-                type: "GET",
+                type: "POST",
                 dataType: "JSON",
+                data: data,
                 success: function (data) {
                     console.log("返回数据：" + data);
                     _this.query();
@@ -49,7 +52,7 @@ VM = new Vue({
                 url: "http://localhost:8060/userPage",
                 type: "POST",
                 dataType: "JSON",
-                data: $.extend(_this.queryForm,pageInfo),
+                data: $.extend(_this.queryForm, pageInfo),
                 success: function (data) {
                     console.log("返回数据：" + data);
                     _this.result = data;
@@ -65,22 +68,34 @@ VM = new Vue({
                 data: _this.queryForm,
                 success: function (data) {
                     console.log("返回数据：" + data);
-                    _this.result.data=data;
+                    _this.result.data = data;
                 }
             });
         },
-        exportToExcel:function () {
-            window.location.href="http://localhost:8060/export";
-           /* $.ajax({
-                url: "http://localhost:8060/export",
-                type: "GET",
-                dataType: "json",
-                data: _this.queryForm,
-                success: function (data) {
-                    console.log("返回数据：" + data);
-                    _this.result.data=data;
-                }
-            });*/
+        exportToExcel: function () {
+            window.location.href = "http://localhost:8060/export";
         }
     }
+});
+
+$('.addUser').click(function () {
+    var url = "http://localhost:8060/addUser";
+
+    var name = $("#addName").val();
+    var hobby = $("#addHobby").val();
+    var jsonString = {
+        "name": name,
+        "hobby": hobby
+    };
+    window.location.href="http://localhost:8060/addUser?name="+name+"&hobby="+hobby;
+    /*$.ajax({
+        url: url,
+        type: "POST",
+        dataType: "JSON",
+        data:jsonString,
+        success: function (data) {
+            console.log("返回数据：" + data);
+            _this.query();
+        }
+    });*/
 });

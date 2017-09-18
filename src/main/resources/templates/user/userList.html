@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/style.css"/>
 </head>
 <body>
-<div >
+<div>
     <div id="wrapper">
         <!--<div class="overlay"></div>-->
 
@@ -37,7 +37,8 @@
                     <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown
+                        <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Dropdown heading</li>
                         <li><a href="#">Action</a></li>
@@ -76,19 +77,24 @@
                                 <div class="form-group">
                                     <label for="name" class="col-md-1 control-label">姓名</label>
                                     <div class="col-md-2">
-                                        <input type="text" class="form-control" name="name" id="name" v-model="queryForm.name"/>
+                                        <input type="text" class="form-control" name="name" id="name"
+                                               v-model="queryForm.name"/>
                                     </div>
 
                                     <label for="hobby" class="col-md-1 control-label">爱好</label>
                                     <div class="col-md-2">
-                                        <input type="text" class="form-control" name="hobby" id="hobby" v-model="queryForm.hobby"/>
+                                        <input type="text" class="form-control" name="hobby" id="hobby"
+                                               v-model="queryForm.hobby"/>
                                     </div>
 
                                     <button type="button" class="btn btn-default " @click="query">分页搜索</button>
                                     <button type="button" class="btn btn-default " @click="queryAll">搜索全部</button>
 
-                                    <button type="button" class="btn btn-default" @click="createUser">新增用户</button>
-                                    <button type="button" class="btn btn-default" @click="exportToExcel">导出到Excel</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal"
+                                            data-target="#formModel">新增用户
+                                    </button>
+                                    <button type="button" class="btn btn-default" @click="exportToExcel">导出到Excel
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -111,20 +117,69 @@
                                 <td>{{person.hobby}}</td>
                                 <td>{{person.birthday}}</td>
                                 <td class="text-center">
-                                    <button type="button" class="btn btn-default" @click="deletePerson(index)">删除用户</button>
+                                    <button type="button" class="btn btn-default" @click="deletePerson(index)">删除用户
+                                    </button>
                                 </td>
                             </tr>
                             </tbody>
                             <tfoot>
-                                <tr>
-                                    <td colspan="100">
-                                        <vue-page :paginator="result.paginator" :size="10" :query="query"></vue-page>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td colspan="100">
+                                    <vue-page :paginator="result.paginator" :size="10" :query="query"></vue-page>
+                                </td>
+                            </tr>
                             </tfoot>
                         </table>
                     </div>
 
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="formModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true" data-replace="true">
+                <div class="modal-dialog" style="width:900px">
+                    <div class="modal-content">
+                        <div>
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                                </button>
+                                <h4 class="modal-title" id="myModelLabel">模态框（Modal）标题</h4>
+                                <h3>创建新用户</h3>
+                            </div>
+                            <div class="modal-body">
+
+                                <form class="form form-horizontal" id="addForm1">
+                                    <div class="form-group">
+                                        <label for="addName" class="control-label col-md-2">姓名</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="addName" v-model="addForm.name"
+                                                   placeholder="请输入姓名">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="addHobby" class="control-label col-md-2">爱好</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" id="addHobby" v-model="addForm.hobby"
+                                                   placeholder="请输入爱好">
+                                        </div>
+                                    </div>
+                                    <!--<div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="button" class="btn btn-default">
+                                                提交
+                                            </button>
+                                        </div>
+                                    </div>-->
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary addUser">提交更改</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,7 +212,7 @@
                 trigger.addClass('is-closed');
                 isClosed = false;
             } else {
-               // overlay.show();
+                // overlay.show();
                 trigger.removeClass('is-closed');
                 trigger.addClass('is-open');
                 isClosed = true;
@@ -167,6 +222,8 @@
         $('[data-toggle="offcanvas"]').click(function () {
             $('#wrapper').toggleClass('toggled');
         });
+
+
     });
 </script>
 
