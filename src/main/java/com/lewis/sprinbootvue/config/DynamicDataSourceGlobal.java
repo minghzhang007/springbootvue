@@ -1,5 +1,5 @@
 package com.lewis.sprinbootvue.config;
 
 public enum DynamicDataSourceGlobal {
-    READ, WRITE;
+    READ, WRITE, OTHER;
 }

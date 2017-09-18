@@ -15,7 +15,11 @@ spring:
       username: root
       password: root
       driver-class-name: com.mysql.jdbc.Driver
-
+    cluster1:
+      url: jdbc:mysql://127.0.0.1:3306/snail_reader?useUnicode=yes&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
   session:
     store-type: none
 

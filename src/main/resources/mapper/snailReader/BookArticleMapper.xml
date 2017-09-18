@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lewis.sprinbootvue.biz.mybatis.dao.snailReader.BookArticleMapper">
+
+    <resultMap id="bookArticle" type="com.lewis.sprinbootvue.biz.mybatis.entity.BookAriticle">
+        <id column="ArticleId" property="ArticleId" jdbcType="BIGINT"/>
+        <result column="Uuid" property="Uuid" jdbcType="VARCHAR"/>
+        <result column="BookId" property="BookId" jdbcType="BIGINT"/>
+        <result column="Title" property="Title" jdbcType="VARCHAR"/>
+
+        <result column="CreateTime" property="CreateTime" jdbcType="BIGINT"/>
+        <result column="UpdateTime" property="UpdateTime" jdbcType="BIGINT"/>
+        <result column="Status" property="Status" jdbcType="INTEGER"/>
+        <result column="ContentKey" property="ContentKey" jdbcType="VARCHAR"/>
+        <result column="EncryptContentKey" property="EncryptContentKey" jdbcType="VARCHAR"/>
+        <result column="EncryptKey" property="EncryptKey" jdbcType="VARCHAR"/>
+        <result column="WordCount" property="WordCount" jdbcType="INTEGER"/>
+        <result column="ArticleIndex" property="ArticleIndex" jdbcType="INTEGER"/>
+        <result column="Level" property="Level" jdbcType="INTEGER"/>
+        <result column="PublishVersion" property="PublishVersion" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="queryAllBookArticle" resultMap="bookArticle" >
+        SELECT * from bookarticle
+    </select>
+    
+
+</mapper>

@@ -33,12 +33,6 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-   /* @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource dataSource() {
-        return new DruidDataSource();
-    }*/
-
 
     @Bean(value = "writeDataSource")
     @Primary
@@ -53,9 +47,15 @@ public class Application {
         return new DruidDataSource();
     }
 
+    @Bean(value = "snailReaderDataSource")
+    @ConfigurationProperties(prefix = "spring.datasource.cluster1")
+    public DataSource snailReaderDataSource(){
+        return new DruidDataSource();
+    }
+
     @Bean(value = "dynamicDataSource")
     public DataSource dynamicDataSource(){
-        return new DynamicDataSource(writeDataSource(),readDataSource());
+        return new DynamicDataSource(writeDataSource(),readDataSource(),snailReaderDataSource());
     }
 
     @Bean
@@ -63,7 +63,7 @@ public class Application {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dynamicDataSource());
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mapper/*.xml"));
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mapper/**/*.xml"));
         //添加分页插件
         Interceptor[] plugins = {pageHelper(),new DynamicPlugin()};
         sqlSessionFactoryBean.setPlugins(plugins);
