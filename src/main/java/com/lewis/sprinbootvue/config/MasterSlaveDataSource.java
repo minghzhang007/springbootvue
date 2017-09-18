@@ -1,45 +1,51 @@
 package com.lewis.sprinbootvue.config;
 
-import java.util.List;
+import java.util.Map;
 
 public class MasterSlaveDataSource {
 
     /**
      * 主库 写数据源
      */
-    private Object masterDataSource;
+    private Object masterDs;
+
+    private String masterKey;
 
     /**
-     * 从库 读数据源列表
+     * 从库 读数据源列表 key为从库的key  value为从库的数据源
      */
-    private List<Object> slaveDataSources;
+    private Map<String, Object> slaveDsMap;
 
-    public MasterSlaveDataSource(Object masterDataSource, List<Object> slaveDataSources) {
-        this.masterDataSource = masterDataSource;
-        this.slaveDataSources = slaveDataSources;
+    public Object getMasterDs() {
+        return masterDs;
     }
 
-    public Object getMasterDataSource() {
-        return masterDataSource;
+    public void setMasterDs(Object masterDs) {
+        this.masterDs = masterDs;
     }
 
-    public void setMasterDataSource(Object masterDataSource) {
-        this.masterDataSource = masterDataSource;
+    public String getMasterKey() {
+        return masterKey;
     }
 
-    public List<Object> getSlaveDataSources() {
-        return slaveDataSources;
+    public void setMasterKey(String masterKey) {
+        this.masterKey = masterKey;
     }
 
-    public void setSlaveDataSources(List<Object> slaveDataSources) {
-        this.slaveDataSources = slaveDataSources;
+    public Map<String, Object> getSlaveDsMap() {
+        return slaveDsMap;
+    }
+
+    public void setSlaveDsMap(Map<String, Object> slaveDsMap) {
+        this.slaveDsMap = slaveDsMap;
     }
 
     @Override
     public String toString() {
         return "MasterSlaveDataSource{" +
-                "masterDataSource=" + masterDataSource +
-                ", slaveDataSources=" + slaveDataSources +
+                "masterDs=" + masterDs +
+                ", masterKey='" + masterKey + '\'' +
+                ", slaveDsMap=" + slaveDsMap +
                 '}';
     }
 }

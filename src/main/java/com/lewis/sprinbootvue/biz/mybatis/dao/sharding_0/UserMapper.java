@@ -1,4 +1,4 @@
-package com.lewis.sprinbootvue.biz.mybatis.dao;
+package com.lewis.sprinbootvue.biz.mybatis.dao.sharding_0;
 
 
 import com.lewis.sprinbootvue.biz.mybatis.entity.User;

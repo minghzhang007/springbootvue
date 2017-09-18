@@ -1,6 +1,6 @@
 package com.lewis.sprinbootvue.biz.service.impl;
 
-import com.lewis.sprinbootvue.biz.mybatis.dao.UserMapper;
+import com.lewis.sprinbootvue.biz.mybatis.dao.sharding_0.UserMapper;
 import com.lewis.sprinbootvue.biz.mybatis.dao.snailReader.BookArticleMapper;
 import com.lewis.sprinbootvue.biz.mybatis.entity.BookAriticle;
 import com.lewis.sprinbootvue.biz.mybatis.entity.User;
@@ -26,19 +26,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public PageList<User> getUsersByPage(final UserQueryObject queryObject, Paginator paginator) {
-        /*PageList<User> pageList = new AbstractPageTemplate<User>() {
-            @Override
-            protected List<User> queryItems() {
-                return userMapper.getAllUser(queryObject);
-            }
-        }.getItemsByPage(paginator);*/
+
         PageList<User> pageList = getPageList(queryObject,paginator);
         List<BookAriticle> bookAriticles = bookArticleMapper.queryAllBookArticle();
         System.out.println("got bookAriticles:"+bookAriticles.toString());
         return pageList;
     }
 
-    @Transactional
+    //@Transactional
     public PageList<User> getPageList(final UserQueryObject queryObject, Paginator paginator){
         return new AbstractPageTemplate<User>() {
             @Override
